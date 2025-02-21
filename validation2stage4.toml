@@ -1,0 +1,35 @@
+[mesh]
+name = 'square20x20.msh'
+
+[BCs_Neumann]
+
+
+[BCs_Dirichlet_line]
+bc101.physId = 101
+bc101.value = 0
+bc102.physId = 102
+bc102.value = 0
+bc103.physId = 103
+bc103.value = 0
+bc104.physId = 104
+bc104.value = 0
+
+[BCs_Dirichlet_nodes]
+
+
+[Source]
+# Types are: 'constant', 'piecewise_constant'
+source1.sourceType = 'constant'
+source1.value = 1.0
+
+[Conductivities]
+conductivity1000.physId = 1000
+conductivity1000.value = 1.0
+
+[export]
+exportName = 'Validation_2.pos'
+
+[solver_options]
+useSparse = false
+verboseOutput = true
+

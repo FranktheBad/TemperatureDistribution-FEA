@@ -1,0 +1,33 @@
+[mesh]
+name = 'squareBimat10x10.msh'
+
+[BCs_Neumann]
+bc102.physId = 102
+bc102.value = 5
+
+[BCs_Dirichlet_line]
+bc104.physId = 104
+bc104.value = 0
+
+[BCs_Dirichlet_nodes]
+#bc1.physId = 1
+#bc1.value = 0
+
+[Source]
+# Types are: 'constant', 'piecewise_constant'
+source1.sourceType = 'constant'
+source1.value = 0.0
+
+[Conductivities]
+conductivity1000.physId = 1000
+conductivity1000.value = 1.0
+conductivity1000.physId = 2000
+conductivity1000.value = 10.0
+
+[export]
+exportName = 'BonusBimat.pos'
+
+[solver_options]
+useSparse = false
+verboseOutput = true
+
